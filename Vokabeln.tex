@@ -9,7 +9,7 @@
 \usepackage[T1]{fontenc} % Für bessere Silbentrennung
 \usepackage{lmodern} % Für eine weniger pixelige Schriftart
 \usepackage{graphicx} % Für Bilder (png, pdf, jpg,...)
-%
+
 %-------------Mathezeugs--------------
 \usepackage{amssymb}
 \usepackage{amsthm} % Für mehr Funktionen bei den theorem-Umgebungen
@@ -31,15 +31,15 @@
 %
 %------------Theorem-Definitionen----------
 % braucht man für Seminararbeiten o.Ä.
-%\newtheorem{satz}{Satz}[chapter] % Die Nummerierung für Sätze richtet sich so nach Kapiteln
+\theoremstyle{definition} % Die folgenden Umgebungen werden damit nicht kursiv
+\newtheorem{satz}{Satz}[section] % Die Nummerierung für Sätze richtet sich so nach Kapiteln
 % Das [satz] in den folgenden Definitionen bedeutet, dass alle diese Theoreme fortlaufend mit den Sätzen nummeriert werden (Also "Satz 1.1, Bemerkung 1.2, Satz 1.3" statt "Satz 1.1, Bemerkung 1.1, Satz 1.2" etc.)
-%\newtheorem{prop}[satz]{Proposition}
-%\newtheorem{lem}[satz]{Lemma}
-%\newtheorem{kor}[satz]{Korollar}
-%\newtheorem{bem}[satz]{Bemerkung}
-%\theoremstyle{definition} % Die folgenden Umgebungen werden damit nicht kursiv
-%\newtheorem{defi}[satz]{Definition}
-%\newtheorem{bsp}[satz]{Beispiel}
+\newtheorem{prop}[satz]{Proposition}
+\newtheorem{lem}[satz]{Lemma}
+\newtheorem{kor}[satz]{Korollar}
+\newtheorem{bem}[satz]{Bemerkung}
+\newtheorem{defi}[satz]{Definition}
+\newtheorem{bsp}[satz]{Beispiel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
