@@ -4,7 +4,7 @@
 % Vorlage für ein Aufgabenblatt im Seminar ``Digitale Werkzeuge im Mathematikunterricht'' am KIT
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[english,ngerman]{babel} % So ist deutsch die Standardsprache, englisch kann eingeschaltet werden. 
+\usepackage[english,ngerman]{babel} % So ist deutsch die Standardsprache, englisch kann eingeschaltet werden.
 \usepackage[utf8]{inputenc} % Für Umlaute
 \usepackage[T1]{fontenc} % Für bessere Silbentrennung
 \usepackage{lmodern} % Für eine weniger pixelige Schriftart
@@ -42,13 +42,15 @@
 \newtheorem{bsp}[satz]{Beispiel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}
+\setlist{nolistsep}
 %
 \begin{document}
 
 \raisebox{-5mm}{\includegraphics[width=30mm]{kit_logo_de_color.jpg}}
 %
 \hfill \parbox{24mm}
-{ 
+{
 Malte Voss\\
 David Knothe\\
 }
@@ -62,17 +64,17 @@ Vokabeln der Elementaren Geometrie \\[1ex] % Zeilenumbruch mit Abstand
 % Vortragsnummer und Thema
 {
 % \Large 1. Blatt:   \glqq Thema\grqq } \\[1ex]
-% Die Befehle \glqq und \grqq stehen dabei für german left / right double quote. 
+% Die Befehle \glqq und \grqq stehen dabei für german left / right double quote.
 %
 % Name der Vortragenden und Datum der Erstellung
 %
 \today
 }
 \end{center}
-% 
-\rule{\textwidth}{1pt}\\                                 % Linie über die ganze Textbreite                                  
+%
+\rule{\textwidth}{1pt}\\                                 % Linie über die ganze Textbreite
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Euklidische Geometrie} 
+\section{Euklidische Geometrie}
 \input{Vok_EG}
 \vspace{3ex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,7 +102,7 @@ Vokabeln der Elementaren Geometrie \\[1ex] % Zeilenumbruch mit Abstand
 % eine abgesetzte Formel beginnt mit \[ und endet mit \] oder
 %
 \begin{equation}
- 
+
 \end{equation}
 %
 % Auzählungen mit Nummern:
@@ -112,8 +114,8 @@ Vokabeln der Elementaren Geometrie \\[1ex] % Zeilenumbruch mit Abstand
 %
 %Aufzählung ohne Nummern
 \begin{itemize}
- \item 
- \item 
+ \item
+ \item
  \item
 \end{itemize}
 %
@@ -125,6 +127,3 @@ Vokabeln der Elementaren Geometrie \\[1ex] % Zeilenumbruch mit Abstand
 \begin{tabular}{|l|c|r|} \hline
  & & \\ \hline
 \end{tabular}
-
-
-
