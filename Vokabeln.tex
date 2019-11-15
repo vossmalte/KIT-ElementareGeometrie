@@ -40,16 +40,16 @@
   {\itshape} % HEADFONT
   {.}         % HEADPUNCT
   {5pt plus 1pt minus 1pt} % HEADSPACE
-  {\thmname{#1}\thmnumber{ #2}\thmnote{\textnormal{ \textbf{(#3)}}}}          % CUSTOM-HEAD-SPEC
+  {\thmname{#1}\thmnumber{ #2}\thmnote{\textnormal{ \textbf{#3}}}}          % CUSTOM-HEAD-SPEC
 \theoremstyle{costum} % Die folgenden Umgebungen werden damit nicht kursiv
 \newtheorem{satz}{Satz}[section] % Die Nummerierung für Sätze richtet sich so nach Kapiteln
 % Das [satz] in den folgenden Definitionen bedeutet, dass alle diese Theoreme fortlaufend mit den Sätzen nummeriert werden (Also "Satz 1.1, Bemerkung 1.2, Satz 1.3" statt "Satz 1.1, Bemerkung 1.1, Satz 1.2" etc.)
-\newtheorem{prop}[satz]{Proposition}
-\newtheorem{lem}[satz]{Lemma}
-\newtheorem{kor}[satz]{Korollar}
-\newtheorem{bem}[satz]{Bemerkung}
-\newtheorem{defi}[satz]{Definition}
-\newtheorem{bsp}[satz]{Beispiel}
+% \newtheorem{prop}[satz]{Proposition}
+% \newtheorem{lem}[satz]{Lemma}
+\newtheorem*{kor}{Korollar}
+\newtheorem*{bem}{Bem}
+\newtheorem*{defi}{Def}
+\newtheorem*{bsp}{Bsp}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{enumitem}
