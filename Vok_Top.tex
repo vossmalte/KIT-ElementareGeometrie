@@ -73,9 +73,17 @@ Eine Menge / topologischer Raum $X$ heißt \emph{kompakt}, wenn jede offene Übe
 \item Auf der diskreten Topologie gilt: $X$ kompakt $\Leftrightarrow$ $X$ endlich.
 \item Abgeschlossene Intervalle in $\RR$ sind kompakt.
 \item Alle abgeschlossenen und beschränkten Teilmengen des $\RR^N$ sind kompakt.
-\item Abgeschlossene Teilmengen von einem Kompaktum sind kompakt. \\
+\item Abgeschlossene Teilmengen von einem Kompaktum sind kompakt.
 \end{itemize}
 \end{bsp}
+
+\begin{bem}
+Kompaktheit erlaubt \emph{Schlüsse von lokalen auf globale Eigenschaften}. Bspw.:
+\begin{itemize}
+	\item Ist $f: X \to \RR$ (stetig) lokal beschränkt, so auch global.
+	\item Ist $\{A_i\}$ eine lokal endliche Überdeckung von X, so ist die Überdeckung endlich. \\
+\end{itemize}
+\end{bem}
 
 \begin{satz}[von Heine-Borel] Die kompakten Teilmengen des $\RR^n$ sind genau die abgeschlossenen und beschränkten.
 \end{satz}
@@ -87,6 +95,10 @@ Stetige Funktionen auf Kompakta sind beschränkt.
 $X$ Hausdorff-Raum, $K \subseteq X$ kompakt, so $K$ abgeschlossen in $X$. \\
 \end{kor}
 
-\paragraph*{Schlüsse von lokalen auf globale Eigenschaften}
 
-$\dots$
+\begin{defi}[Limes]
+$(x_n)$ Folge in $X$. Dann ist $a \in X$ ist \emph{Limes} der Folge, wenn sich in jeder Umgebung U von $a$ fast alle Folgenglieder befinden.
+\end{defi}
+\begin{bem}
+In Hausdorff-Räumen sind Limiten eindeutig.
+\end{bem}
