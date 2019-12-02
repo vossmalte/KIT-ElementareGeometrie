@@ -58,14 +58,62 @@
 
 \begin{bem}
   Solche \glqq Rechtecke\grqq{} sind offen in der Produkttopologie,
-  aber nicht alle offenen Mengen sind solche
+  aber nicht alle offenen Mengen sind solche Rechtecke.
 \end{bem}
 
+\begin{defi}[Basis]
+  Menge $\mathcal{B}$ Basis $:\Leftrightarrow$ jede offene Menge
+  in $X$ ist Vereinigung von solchen aus $\mathcal{B}$
+\end{defi}
 
-ï»¿$\dots$
+\begin{defi}[Subbasis]
+  Menge $\mathcal{S}$ Subbasis $:\Leftrightarrow$ jede offene Menge
+  in $X$ ist Vereinigung von endlich viele Durchschnitten
+  von Mengen aus $\mathcal{B}$\\
+  $\Leftrightarrow$ endliche Schnitte in $\mathcal{S}$ sind Basis.
+\end{defi}
+
+\begin{bem}
+  Für $S \subset 2^X$ gibt es genau eine Topologie für die $S$ Subbasis ist.
+\end{bem}
+
+\begin{bem}
+  \begin{itemize}
+    \item Kompositionen stetiger Abbildungen sind stetig
+    \item $f:X\to Y$ stetig, $X_0 \subset X \Rightarrow f|_{X_0}$ stetig
+    \item $f:X+Y\to Z$ stetig $\Leftrightarrow f|_X, f|_Y$ stetig
+    \item $(f,g): Z\to X\times Y$ stetig $\Leftrightarrow f:Z\to X, g:Z\to Y$ stetig
+  \end{itemize}
+\end{bem}
+
+\begin{defi}[Homömorphismus]
+  $f:X\to Y$ heißt Homömorphismus, wenn $f$ bijektiv, $f$ stetig, $f^{-1}$ stetig.\\
+  X und Y sind dann homöomorph ($X\approx Y$).
+\end{defi}
+
+\begin{bem}
+  Homömorphismen sind strukturerhaltende (offen, abgeschlossen, Umgebung, (Sub-)Basis) 
+  Abbildungen zwischen top. Räumen.
+\end{bem}
+
+\begin{defi}[Zusammenhang]
+  X heißt zusammenhängend, wenn er sich nicht in zwei nichtleere, offene und
+  disjunkte Teilmengen zerlegen lässt.\\
+  $\Leftrightarrow X, \emptyset$ sind die einzigen Teilmengen, die offen und abgeschlossen sind.
+\end{defi}
+
+\begin{bem}
+  Zusammenhang ist eine Invariante, also $X, Y$ nicht homöomorph, 
+  wenn einer zusammenhängend, der andere nicht.
+\end{bem}
+
+$\dots$
 
 \begin{defi}[Wegzusammenhang]
-Ein topologischer Raum $X$ heißt \emph{wegzusammenhängend}, wenn es zu je zwei Punkten $a, b \in X$ einen Weg von $a$ nach $b$ gibt, d.h. eine stetige Abbildung $f: [0, 1] \to X$ mit $f(0) = a$, $f(1) = b$.
+Ein topologischer Raum $X$ heißt \emph{wegzusammenhängend}, 
+wenn es zu je zwei Punkten $a, b \in X$ 
+einen Weg von $a$ nach $b$ gibt, 
+d.h. eine stetige Abbildung $f: [0, 1] \to X$ mit $f(0) = a$, $f(1) = b$.
 \end{defi}
 
 \begin{bem} Es gilt:
@@ -105,7 +153,7 @@ Eine Menge / topologischer Raum $X$ heißt \emph{kompakt}, wenn jede offene Übe
 Kompaktheit erlaubt \emph{Schlüsse von lokalen auf globale Eigenschaften}. Bspw.:
 \begin{itemize}
 	\item Ist $f: X \to \RR$ (stetig) lokal beschränkt, so auch global.
-	\item Ist $\{A_i\}$ eine lokal endliche Ãœberdeckung von X, so ist die Ãœberdeckung endlich. \\
+	\item Ist $\{A_i\}$ eine lokal endliche Überdeckung von X, so ist die Überdeckung endlich. \\
 \end{itemize}
 \end{bem}
 
