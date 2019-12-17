@@ -2,16 +2,51 @@
 Eine \emph{Fläche} ist eine glatte 2-dimensionale Mf.
 \end{defi}
 
-\begin{bsp}
-$S^2$, Donut, \dots
-\end{bsp}
 
 \begin{defi}[Orientierbarkeit]
 Eine Fläche heißt \emph{nicht orientierbar}, wenn sie eine Teilmenge enthält, die zum Möbiusband homöomorph ist.
 \end{defi}
 
-\begin{bsp}
+\begin{bsp}[für nicht orientierbar]
 Möbiusband; $\mathbb{RP}^2$ = \{ Geraden durch $0 \in \RR^3$ \}.
+\end{bsp}
+
+\begin{bem}
+	Um neue Flächen zu gewinnen kann man Polygone mit gerader Kantenzahl nehmen und 
+	paarweise kanten identifizieren.
+\end{bem}
+
+\begin{bem}[Systematisches Vorgehen]
+	Gehe gegen den Uhrzeigersinn die Seiten des Polygons ab und gebe jeder Seite
+	ein Symbol, e.g. $a$, falls a in Durchlaufrichtung zeigt, sonst $a^-1$.
+\end{bem}
+
+\begin{bsp}
+	$S^2 = aa^{-1}$, 
+	Donut $T^2 = aba^{-1}b^{-1}$, 
+	$\RR\mathbb{P}^2 = abab = aa$,
+	Kleinsche Flasche $K^2 = aba^{-1}b^{-1}$
+\end{bsp}
+
+\begin{defi}[Zusammenhängende Summe]
+	Schneide aus $F$ und $F'$ eine abgeschlossene Kreisscheibe aus, 
+	identifiziere die Ränder der Scheiben mit einem Homöomorphismus. 
+	$\Rightarrow$ Zusammenhängende Summe $F\#F'$.
+\end{defi}
+
+\begin{bem}
+	$\#$ ist kommutativ, assoziativ und das neutrale Element ist $S^2$. 
+	$(\{F\}, \#)$ ist also eine Halbgruppe.
+\end{bem}
+
+\begin{bem}
+	Entspricht $F$ dem Zeichensatz $A$ und $F'$ dem Zeichensatz $B$,
+	so $F\#F'$ dem Zeichensatz $AB$.
+\end{bem}
+
+\begin{bsp}
+	$a_1 b_1 a_1^{-1} b_1^{-1}\dots a_g b_g a_g^{-1} b_g^{-1}$
+	entspricht einer geschlossenen orientierbaren Fläche mit $g$ Löchern.
 \end{bsp}
 
 \begin{satz}[Klassifikationssatz für Flächen]
