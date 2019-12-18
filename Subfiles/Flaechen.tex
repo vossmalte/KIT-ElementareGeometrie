@@ -65,3 +65,77 @@ $\mathbb{RP}^2 \# \mathbb{RP}^2 \approx K^2$ (Kleinsche Flasche).
 \begin{lemma}
 $3 \mathbb{RP}^2 \approx T^2 \# \mathbb{RP}^2 $ (Kleinsche Flasche).
 \end{lemma}
+
+\begin{defi}[Simplex]
+	$k\le n$, $v_0,\dots,v_k \in \RR^n$ affin unabhängig erzeugen den
+	$k$-Simplex $\sigma = \sigma^k$ als konvexe Hülle der Punkte $v_0,\dots,v_k$.\\
+	Also $\sigma = [v_0,\dots,v_k] = \{x\in\RR^n | x=\sum_{i=0}^n a_i v_i$ 
+	mit $a_i\ge 0$ und $\sum_{i=0}^n a_i = 1\}$.
+\end{defi}
+
+\begin{bem}[Dimension, Seiten, Standardsimplex]~
+	\begin{itemize}
+		\item $k$ heißt die Dimension von $\sigma^k$.
+		\item konvexe Hülle von einer Teilmenge an $v_i$ heißt Seite.
+		\item Seiten sind auch immer Simplizes.
+		\item 0-dim Seite: Ecke, 1-dim Seite: Kante von $\sigma$.
+		\item $(k-1)$-dim Seite von $\sigma^k$: Seitenfläche, Seiten von Dimension $<k$: echte Seiten
+		\item Standardsimplex aufgespannt von $[0, e_1,\dots, e_n] =: \Delta^k$
+		\item Simplizes tragen Teilraum-Topologie, innere Punkte liegen \emph{nicht} auf einer echten Seite
+	\end{itemize}
+\end{bem}
+
+\begin{bsp}[Simplizes]
+	Strecke, Dreieck, Punkt.\\
+	keine Simplizes: Strecke mit Punkt drauf, Viereck
+\end{bsp}
+
+\begin{bem}[Baryzentrische Koordinaten]
+	$x=\sum_{i=0}^n a_i v_i$, dann heißt $(a_0,\dots,a_k)$ baryzentrische Koordinaten von x. 
+	Baryzentrum = Schwerpunkt, $a_i$ Masse auf $v_i$.\\
+	Baryzentrische Unterteilung in $(k+1)!$ kleinere Simplizes.
+\end{bem}
+
+\begin{defi}[Simplizialkomplex]
+	ist eine Menge $K = \{\sigma_\lambda | \lambda \in \Lambda\}$ von Simplizes in $\RR^n$, wobei:
+	\begin{enumerate}
+		\item Die Vereinigung der Simplizes ist lokal endlich, d.h. jeder Punkt in 
+		$|K| := \cup\sigma_\lambda$ besitzt Umgebung, die nur endlich viele der 
+		$\sigma_\lambda$ trifft.
+		\item Mit $\sigma_\lambda$ enthält $K$ auch alle Seiten von $\sigma_\lambda$.
+		\item $\sigma_{\lambda_1} \cap \sigma_{\lambda_2}$ ist entweder leer oder 
+		eine gemeinsame Seite beider Simplizes.
+	\end{enumerate}
+	Für $\{\sigma_\lambda | \lambda \in \Lambda\}$ endlich heißt $K$ endlicher Simplizialkomplex.
+	$|K| in \RR^n$ (mit Teilraum-Topologie) heißt der $K$ zugrunde liegende topologische Raum
+	oder zu $K$ gehörige Polyeder;\\
+	$\dim K = \max \{\dim\sigma_\lambda | \lambda \in \Lambda\}$;\\
+	$K'\subset K$ Teilkomplex als Vereinigung ausgewählter $\sigma_\lambda$.
+\end{defi}
+
+\begin{defi}[Triangulierbar]
+	Ein topologischer Raum $X$ ist triangulierbar (Polyeder), wenn er Isomorph zu 
+	einem Simplizialkomplex $K$ (zu dessen $|K|$) ist. 
+	$K$ ist dann Triangulierung von $X$.
+\end{defi}
+
+\begin{bsp}
+	$|K|$ ist natürlich triangulierbar mit Homöomorphismus $id_{|K|}$.\\
+	Tetraeder ist homöomorph zur $S^2$.
+\end{bsp}
+
+\begin{bem}
+	Ein Raum kann mehrere Triangulierungen besitzen.
+\end{bem}
+
+\begin{bem}
+	Mit dem ebenen Polygonmodell sieht man, dass jede geschlossene Fläche triangulierbar ist,
+	wenn man sie mit dem richtigen Netz aus 0-, 1-, und 2-Simplizes überdeckt.
+\end{bem}
+
+\begin{bem}
+	Differenzierbare Mf sind immer triangulierbar, topologische Mf i.A. nur bis Dim 3.
+	Dort tragen sie eine eindeutig bestimmbare differenzierbare Struktur.
+\end{bem}
+
+% TODO: Euler-Char
