@@ -138,4 +138,68 @@ $3 \mathbb{RP}^2 \approx T^2 \# \mathbb{RP}^2 $ (Kleinsche Flasche).
 	Dort tragen sie eine eindeutig bestimmbare differenzierbare Struktur.
 \end{bem}
 
-% TODO: Euler-Char
+\begin{satz}[Euler'scher Polyerder-Satz]
+	In konvexen Polyedern $P$ gilt stets $\chi := v-e+f = 2$, 
+	wenn $P$ $v$ Ecken, $e$ Kanten und $f$ Seiten hat.
+\end{satz}
+
+\begin{defi}[Euler-Charakteristik]
+	Sei $S$ eine geschlossene Fläche und 
+	$\mathcal{T} = \{ T_1,\dots,T_f \} $ 
+	eine Triangulierung von $S$ durch $f$ Dreiecke (2-Simplizes).
+	Mit $v$ als Anzahl der Ecken und 
+	$e$ die Anzahl der Kanten von $\mathcal{T}$ ist
+	$\chi(S,\mathcal{T}) := v-e+f$ die Euler-Charakteristik 
+	von $S$ bezüglich $\mathcal{T}$.
+\end{defi}
+
+\begin{satz}
+	$\chi(S,\mathcal{T})$ ist unabhängig von $\mathcal{T}$ 
+	und sogar unabhängig von jeder anderen polygonalen Zerlegung.
+\end{satz}
+
+\begin{bem}
+	$\chi(S^2)=2$, 
+	$\chi(T^2)=0$, 
+	$\chi(\RR\mathbb{P}^2)=1$
+\end{bem}
+
+\begin{satz}
+	Für geschlossene Flächen $S_1, S_2$ gilt:
+	$\chi(S_1\#S_2) = \chi(S_1) + \chi(S_2) - 2$
+\end{satz}
+
+\begin{satz}
+	$F:S_1\to S_2$ Homöomorphismus und 
+	$\mathcal{T}$ Triangulierung von $S_1$,
+	dann ist $F(\mathcal{T})$ 
+	Triangulierung von $S_2$.
+\end{satz}
+
+\begin{satz}
+	Sind zwei geschlossene Flächen homöomorph,
+	so besitzen sie die gleiche Euler-Charakteristik.
+\end{satz}
+
+\begin{bem}
+	Umkehrung gilt nicht, bspw:
+	$\chi(K^2)=\chi(\RR\mathbb{P}^2\#\RR\mathbb{P}^2) = 2-2 = 0 = \chi(T^2)$
+\end{bem}
+
+\begin{satz}
+	Zwei geschlossene Flächen sind genau dann homöomorph,
+	wenn sie beide (nicht) orientierbar sind und
+	gleiche Euler-Charakteristik besitzen.
+\end{satz}
+
+\begin{defi}[Genus]
+	Das Geschlecht (Genus) einer geschlossenen Fläche ist 
+	$g(S) = 0.5\times(2-\chi(S))$ für S orientierbar, sonst 
+	$g(S) = 2-\chi(S)$.
+\end{defi}
+
+\begin{bem}
+	Im endlichen Fall ist $g(S)$ einfach 
+	die Anzahl der Löcher in $S$:
+	$g(S^2)=0$, $g(T^2)=1$, $g(T^2\#T^2)=2$
+\end{bem}
