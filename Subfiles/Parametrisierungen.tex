@@ -1,0 +1,96 @@
+\begin{defi}
+    Eine Fläche im $\RR^3$ ist eine glatte Untermannigfaltigkei
+    der Dimension 2 des $\RR^3$.
+\end{defi}
+
+\begin{bem}
+    $F\subset \RR^3$. Zu jedem Punkt von F gibt es eine Umgebung $U$ und eine Abbildung
+    $r:V\to\RR^3$ von einer offenen Teilmenge $V\subset\RR^2$, sodass
+    \begin{enumerate}
+        \item $r:V\to U$ ist Homöomorphismus.
+        \item $r(u,v) = (x(u,v),y(u,v),z(u,v))$ mit $x,y,z:V\to \RR$ ist glatt.
+        \item $r_u := \frac{\partial r}{\partial u} = 
+        (\frac{\partial x}{\partial u},\frac{\partial y}{\partial u}, \frac{\partial z}{\partial u}) = 
+        r_x\frac{\partial}{\partial u} = Dr\cdot\frac{\partial }{\partial u}$
+        und $r_v$ sind linear unabhängig.
+    \end{enumerate}
+\end{bem}
+
+\begin{defi}{Lokale Parametrisierung}
+    $r:V\subset \RR^2\to\RR^3$ mit $r(V)\subset F$.
+    Dabei gelten 2) und 3), 1) nicht notwending.
+\end{defi}
+
+\begin{bsp}{Parametrisierungen}
+    \begin{itemize}
+        \item Torus $T^2$: $r(u,v) = (a+b\cos u)(\cos v \cdot e_1 + \sin v \cdot e_2) + b\sin u \cdot e_3$
+        \item Sphäre $S^2$: $r(u,v) = a\sin u \sin v \cdot e_1 + a\cos u \sin v \cdot e_2 + a\cos v \cdot e_3$
+        \item Rotationsfläche: $r(u,v) = f(u)(\cos v \cdot e_1 + \sin v \cdot e_2) + u \cdot e_3$
+        \item Zylinder: $r(u,v) = a(\cos v \cdot e_1 + \sin v \cdot e_2) + u \cdot e_3$
+        \item Kegel: $r(u,v) = au(\cos v \cdot e_1 + \sin v \cdot e_2) + u \dot e_3$
+        \item Helikorid: $r(u,v) = a \cos v \cdot e_1 + au\sin v \cdot e_1 + v\cdot e_3$ (Wendelfläche)
+    \end{itemize}
+\end{bsp}
+
+\begin{bem}
+    Kartenwechsel entspricht Umparametrisierung.
+\end{bem}
+
+\begin{defi}{Einheitsnormalenvektoren}
+    ... % TODO
+\end{defi}
+
+\begin{defi}{Glatte Kurve}
+    in F ist eine Immersion
+    $\gamma:\RR\supset I\to F$ 
+    mit $\gamma'(t) \neq 0 \forall t$ (also nicht stehen bleiben).
+\end{defi}
+
+\begin{bem}
+    $r$ Parametrisierung von $F$, so ist bzgl. $r$ eine glatte Kurve in F gegeben durch
+    eine glatte Abbildung $t\mapsto (u(t),v(t))\subset V$, 
+    $\gamma(t) = r(u(t), v(t)) \subset F$
+\end{bem}
+
+\begin{defi}{Erste Fundamentalform}
+    $\gamma:[a,b] \to F$ glatte Kurve bzgl $r$. 
+
+    $\ell(\gamma) = \int_a^b |\gamma'(t)|dt = 
+        \int_a^b \sqrt{(r_u\cdot u'+r_v\cdot v')(r_u\cdot u+r_v\cdot v')} dt =
+        \int_a^b \sqrt{E\cdot u'^2 + 2Fu'v' + Gv'^2} dt$
+
+    mit $E=r_u\cdot r_u, F=r_u\cdot r_v, G=r_v\cdot r_v$.
+    
+    $I:= Edu^2 + 2Fdudv + Gdv^2$ heißt erste Fundamentalform.
+\end{defi}
+
+\begin{bem}
+    $I$ ist nichts anderes als das euklidische Skalarprodukt eingeschränkt auf
+    $T_aF$ aufgespannt von $r_u, r_v$.
+    In dieser Basis gegeben durch 
+    $\begin{psmallmatrix}
+        E & F \\ F & G \\
+    \end{psmallmatrix}$.
+    Also $E>0, G>0, EG-F^2>0$!
+\end{bem}
+
+\begin{bem}{Änderung der Parametrisierung}
+    $\begin{psmallmatrix}
+        E' & F' \\ F' & G' \\
+    \end{psmallmatrix} = 
+    \begin{psmallmatrix}
+        u_x & u_y \\ v_x & v_y \\
+    \end{psmallmatrix}
+    \cdot
+    \begin{psmallmatrix}
+        E & F \\ F & G \\
+    \end{psmallmatrix}
+    \cdot
+    \begin{psmallmatrix}
+        u_x & u_y \\ v_x & v_y \\
+    \end{psmallmatrix}$
+\end{bem}
+
+\begin{bem}{Flächeninhalt eines Gebiets}
+    $A(V):=\int_V|r_u\times r_v|dudv = \int_V\sqrt{EG-F^2}dudv$
+\end{bem}
