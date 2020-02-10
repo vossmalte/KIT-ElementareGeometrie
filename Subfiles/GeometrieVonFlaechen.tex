@@ -1,0 +1,49 @@
+\begin{defi}[Abstand auf einer Fläche im $\RR^3$]
+    Das Bogenlängeintegral $\mathcal{l}(\gamma):=\int||\gamma'(t)||dt$
+    $=\int\sqrt{<\gamma'(t),\gamma'(t)>}$
+\end{defi}
+
+\begin{defi}[Abstand auf einer allgemeinen Fläche]
+    Hier wird eine Riemann'sche Metrik auf $S$ (genauer: $TS$) benötigt.
+    Karte von $TS$: $\Phi\times id: U\times\RR^2\to\Phi(U)\times\RR^2$,
+    $(p,u\partial_x + v\partial_y) \mapsto (x,y,u,v)$ mit $\Phi(p)=(x,y)$.
+\end{defi}
+
+\begin{defi}[Skalarprodukt]
+    Ein SP auf $T_pS$ ist eine Funktion $<\dot,\dot>_p: T_pS\times T_pS\to\RR$
+    und es ist symmetrisch, bilinear und positiv definit.
+\end{defi}
+
+\begin{defi}[Riemann'sche Metrik]
+    auf $S$ ist eine Familie von Skalarprodukten auf allen Tangentialräumen $T_pS$ von $S$,
+    die glatt von $p$ abhängt.
+\end{defi}
+
+\begin{bem}
+    Matrix $A$ beschreibt Riemann'sche Metrik, 
+    transformiert bei Koordinatenwechsel in $C^tAC$
+    mit $C$ Jacobi-Matrix des Kartenwechsels.
+\end{bem}
+
+\begin{bsp}[Polarkoordinaten]
+    $x=r\sin(\phi)$, $y=r\cos(\phi)$, $u=u(x,y)$, dann
+    $\frac{\partial u}{\partial r} = \frac{\partial u}{\partial x}\frac{\partial x}{\partial r} + $
+    $\frac{\partial u}{\partial y}\frac{\partial y}{\partial r}$
+    mit Kettenregel. 
+    $\leadsto r\frac{\partial}{\partial r} = x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y}$
+\end{bsp}
+
+\begin{bem}
+    Lokal gibt es immer Riemann'sche Metrik auf einer Mannigfaltigkeit.
+\end{bem}
+
+\begin{defi}
+    Für $u\in T_pS$ gilt:
+    \begin{itemize}
+        \item Länge (Norm): $||u||_p:=\sqrt{<u,u>_p}$
+        \item Winkel: $\alpha=\arccos\frac{<u,v>_p}{||u||_p||v||_p}$
+        \item Parallelogramm Fläche: $||u||_p||v||_p\sin\alpha$
+    \end{itemize}
+\end{defi}
+
+% TODO: Winkel zwischen Kurven

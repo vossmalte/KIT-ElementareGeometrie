@@ -20,8 +20,15 @@
   $U \subset X$ heißt Umgebung von $x\in X$, falls
   $\exists V\in \mathcal{O}$ mit $x\in V \subset U$
 \end{defi}
-\begin{defi}[Innen, außen, Rand, Abschluss]
-  ...
+\begin{defi}[Innen, außen, Rand, Abschluss] Sei $M \in X$.
+  \begin{itemize}
+  	\item Ein Punkt $P$ ist im Inneren von $M$, wenn es ein $o \in \mathcal{O}$ gibt, sodass $x \in o \subseteq M$.
+  	\item Ein Punkt $P$ ist im Äu{\ss}eren von $M$, wenn er im Inneren von $X \backslash M$ ist.
+  	\item Das Innere des Komplements ist das {\"A}u{\ss}ere.
+  	\item Ein Randpunkt von M ist ein Punkt, der weder au{\ss}en noch innen ist.
+  	\item Der Abschluss von $M$ ist $\overline M$, der Schnitt aller abgeschlossenen Teilmengen von X, die M enthalten, also $\overline M = \cap \{ A \in X \backslash \mathcal{O}: M \subset A \}$.
+  	\item Der Rand von M ist $\delta M = \overline M \backslash ^\circ M$.
+  \end{itemize}
 \end{defi}
 
 \begin{defi}[Topologie eines metrischen Raums]
