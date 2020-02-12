@@ -94,3 +94,92 @@
 \begin{bem}{Flächeninhalt eines Gebiets}
     $A(V):=\int_V|r_u\times r_v|dudv = \int_V\sqrt{EG-F^2}dudv$
 \end{bem}
+
+\begin{defi}{kurven-isometrisch}
+    Zwei Flächen heißen kurven-isometrisch, falls es einen Diffeomorphismus gibt,
+    der Kurven auf Kurven gleicher Länge abbildet: 
+    $\ell(\gamma)=\ell(f\circ \gamma) \forall \gamma:[0,1]\to F$
+\end{defi}
+
+\begin{defi}{lokale Kurvenisometrie}
+    $f:F\to F'$, falls $\exists$ offene Teilmenge $V\subset F$, sodass
+    $f|_V:V\to f(V)$ eine Isometrie ist.
+\end{defi}
+
+\begin{satz}
+    Zwei Kartenbereiche $U, U'$ von Flächen $F, F'$ im $\RR^3$ sind isometrisch genau dann, wenn
+    $\exists$ Parametrisierungen $r:V\to U, r':V'\to U'$, deren erste Fundamentalform übereinstimmen.
+\end{satz}
+
+\begin{bsp}
+    Kegel und Ebene sind lokal isometrisch.
+\end{bsp}
+
+\begin{defi}{Zweite Fundamentalform}
+    $II:=-(r_u \cdot n_u \cdot du^2 + (r_u \cdot n_v + r_v \cdot n_u)dudv + r_v \cdot n_v \cdot dv^2)$
+        $=\frac{1}{2}\frac{\partial}{\partial t}|_{t=0}I(t)$
+        $=Ldu^2+2Mdudv+Ndv^2$
+        mit $L=r_{uu}\cdot n, M=r_{uv}\cdot n, N=r_vv\cdot n$
+\end{defi}
+
+\begin{bsp}
+    \begin{itemize}
+        \item Ebene: $II=0$
+        \item Sphäre mit Radius $a>0$: $II=\frac{1}{a}I$
+    \end{itemize}
+\end{bsp}
+
+\begin{satz}
+    Verschwindet die zweite Fundamentalform, so ist die Fläche ein Teil der Ebene.
+\end{satz}
+
+\begin{defi}{Gauß-Krümmung}
+    ist die Funktion $K:=\frac{LN-M^2}{EG-F^2}=\frac{\det II}{\det I}$
+\end{defi}
+
+\begin{bsp}
+    \begin{itemize}
+        \item Ebene: $K=0$
+        \item Sphäre: $K=\frac{1}{a^2}$
+    \end{itemize}
+\end{bsp}
+
+\begin{satz}{Theorema Egregium}
+    $\det II$ ist durch $I$ und ihre Ableitungen vollständig bestimmt.
+\end{satz}
+
+\begin{defi}{Geodätische Krümmung}
+    $\kappa_g := t'\cdot n\times t$ mit $t:=\frac{\partial \gamma}{\partial s}$
+    von einer parametrisierten Kurve $\gamma$
+\end{defi}
+
+\begin{defi}{Einfach geschlossene Kurve}
+    ist eine glatte Kurve, deren Bild zu $S^1$ homöomorph ist.
+\end{defi}
+
+\begin{satz}{Gauß-Bonnet I}
+    $\int_\gamma \kappa_g ds = 2\pi - \int_R KdA$,
+    $\gamma$ umschließt $R$.
+\end{satz}
+
+\begin{kor}
+    Winkelsumme $\alpha + \beta + \gamma = \pi + \int_R KdA + \int_\gamma \kappa_g ds$
+\end{kor}
+
+\begin{bsp}
+    Ebene: $\kappa_g=0,K=0 \Rightarrow \alpha + \beta + \gamma = \pi$
+\end{bsp}
+
+\begin{satz}{Gauß-Bonnet II}
+    $F$ glatte, geschlossene, orientierte Fläche, so gilt
+    $\int_F KdA = 2\pi \cdot \chi(F)$
+\end{satz}
+
+\begin{bsp}
+    \begin{itemize}
+        \item $K(S^2)=1 \Rightarrow \chi(S^2)=2$
+        \item $\chi(S^2)=2 \Rightarrow$ Für jede Metrik auf $S^2$ ist $\int_{S^2}KdA=4\pi>0 
+            \Rightarrow es gibt keinen globalen planaren Atlas$
+        \item $\chi(T^2)=0 \Rightarrow $ mittlere Krümmung 0
+    \end{itemize}
+\end{bsp}
