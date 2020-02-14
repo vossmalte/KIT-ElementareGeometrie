@@ -1,18 +1,23 @@
 \begin{defi}[Topologische Mannigfaltigkeit]
-Eine \emph{topologische Manngifaltigkeit} $M$ ist ein Hausdorff-Raum mit abzählbarer Basis der Topologie, sodass jeder Punkt $p$ aus $M$ eine offene Umgebung besitzt, die homöomorph zu einer offenen Menge von $\RR^N$ ist. ("die lokal so aussieht wie der $\RR^N$")
+	Eine \emph{topologische Manngifaltigkeit} $M$ ist ein Hausdorff-Raum mit abzählbarer Basis der Topologie, 
+	sodass jeder Punkt $p$ aus $M$ eine offene Umgebung besitzt,
+	die homöomorph zu einer offenen Menge von $\RR^N$ ist. ("die lokal so aussieht wie der $\RR^N$")
 \end{defi}
 
 \begin{defi}[Karte, Atlas]
-Ein solcher Homöomorphismus $\phi: U \to V \subseteq \RR^N$ heißt \emph{Karte (um $p$)}; ein \emph{Atlas} von $M$ ist eine Menge $\mathcal{A}$ von Karten von M, deren Definitionsbereiche ganz $M$ überdecken.
+	Ein solcher Homöomorphismus $\phi: U \to V \subseteq \RR^N$ heißt \emph{Karte (um $p$)}; 
+	ein \emph{Atlas} von $M$ ist eine Menge $\mathcal{A}$ von Karten von M, 
+	deren Definitionsbereiche ganz $M$ überdecken.
 \end{defi}
 
 \begin{defi}[Kartenwechsel]
-Für $(U, \phi)$ und $(V, \psi)$ aus $\mathcal{A}$ heißt \underline{$\psi \circ \phi^{-1}$} $: \phi(U \cap V) \to \psi(U \cap V)$ \emph{Kartenwechsel}.
+	Für $(U, \phi)$ und $(V, \psi)$ aus $\mathcal{A}$ heißt 
+	\underline{$\psi \circ \phi^{-1}$} $: \phi(U \cap V) \to \psi(U \cap V)$ \emph{Kartenwechsel}.
 \end{defi}
 
 \begin{defi}[glatt, maximal, $C^\infty$]
-Ein $C^{\infty}$-Atlas ist ein Atlas auf $M$, für den alle Kartenwechsel $C^{\infty}$-Diffeo\-morphismen sind, und er heißt \emph{maximal}, wenn er in keinem anderen echt enthalten ist.
-In diesem Fall nennt man $\mathcal{A}$ auch \emph{differenzierbare} oder \emph{glatte Struktur} auf $M$ und nennt $M$ \emph{differenzierbare Mannigfaltigkeit}.
+	Ein $C^{\infty}$-Atlas ist ein Atlas auf $M$, für den alle Kartenwechsel $C^{\infty}$-Diffeo\-morphismen sind, und er heißt \emph{maximal}, wenn er in keinem anderen echt enthalten ist.
+	In diesem Fall nennt man $\mathcal{A}$ auch \emph{differenzierbare} oder \emph{glatte Struktur} auf $M$ und nennt $M$ \emph{differenzierbare Mannigfaltigkeit}.
 \end{defi}
 
 \begin{bsp} Beispiele für glatte Mannigfaltigkeiten:
@@ -30,3 +35,39 @@ In diesem Fall nennt man $\mathcal{A}$ auch \emph{differenzierbare} oder \emph{g
 	bildet die $S^n\subset \RR^{n+1}$ surjektiv auf $\RR \mathbb{P}^n$ ab.\\
 	$\Leftarrow\RR \mathbb{P}^n$ ist kompakt als stetiges Bild eines Kompaktums.
 \end{bsp}
+
+\begin{defi}[Untermannigfaltigkeit]
+	Sei $N$ eine n-dim glatte Manngifaltigkeit. 
+	$M\subset N$ heißt m-dim Untermannigfaltigkeit, wenn $\forall p\in M \exists$
+	Karte $(U,\phi) in \mathcal{A}(N)$ mit $\phi:U\to V:=\phi(U)\subset \RR^n$
+	und $M\cap N = \phi^{-1}(V\cap(\RR^m\times {0}))$.
+	$n-m$ heißt Kodimension von M in N.
+\end{defi}
+
+\begin{bem}
+	Jede glatte Untermannigfaltigkeit ist natürlich selbst eine glatte Mannigfaltigkeit.
+\end{bem}
+
+\begin{defi}[offene Untermannigfaltigkeit]
+	ist Teilmenge $M\subset \\R^n$, wenn $\forall x\in M \exists V\subset \RR^m$
+	und $C^\infty$-Diffeomorphismus $\phi:U\to V$ mit $U\cap M=\phi^{-1}(V\cap\RR^m\times{0})$.
+\end{defi}
+
+\begin{defi}[Regulärer Wert]
+	$y\in\RR^m$ heißt regulärer Wert einer glatten Abbildung $f:U\to\RR^m, U\subset\RR^n$ offen,
+	falls $Df(x)=f'(x):\RR^n\to\RR^m$ surjektiv ist für alle $x\in f^{-1}(y)$.
+\end{defi}
+
+\begin{satz}[vom regulären Wert]
+	Ist $y$ regulärer Wert von $f$ wie oben, 
+	so ist $f^{-1}(y)$ eine $(n-m)$-dim Untermannigfaltigkeit von $\RR^n$.
+\end{satz}
+
+\begin{defi}[Glatte Abbildung]
+	$\Phi:M\to N$ heißt glatt, wenn für alle $p\in M \exists$ Karten $\phi,\psi$ und
+	$\psi\circ\Phi\circ\phi^{-1}$ ist glatt im üblichen Sinne. 
+\end{defi}
+
+\begin{satz}[von Whitney]
+	... % TODO
+\end{satz}
