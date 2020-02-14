@@ -1,4 +1,4 @@
-\begin{defi}
+\begin{defi}[Fläche]
     Eine Fläche im $\RR^3$ ist eine glatte Untermannigfaltigkei
     der Dimension 2 des $\RR^3$.
 \end{defi}
@@ -16,12 +16,12 @@
     \end{enumerate}
 \end{bem}
 
-\begin{defi}{Lokale Parametrisierung}
+\begin{defi}[Lokale Parametrisierung]
     $r:V\subset \RR^2\to\RR^3$ mit $r(V)\subset F$.
     Dabei gelten 2) und 3), 1) nicht notwending.
 \end{defi}
 
-\begin{bsp}{Parametrisierungen}
+\begin{bsp}[Parametrisierungen]
     \begin{itemize}
         \item Torus $T^2$: $r(u,v) = (a+b\cos u)(\cos v \cdot e_1 + \sin v \cdot e_2) + b\sin u \cdot e_3$
         \item Sphäre $S^2$: $r(u,v) = a\sin u \sin v \cdot e_1 + a\cos u \sin v \cdot e_2 + a\cos v \cdot e_3$
@@ -36,11 +36,11 @@
     Kartenwechsel entspricht Umparametrisierung.
 \end{bem}
 
-\begin{defi}{Einheitsnormalenvektoren}
+\begin{defi}[Einheitsnormalenvektoren]
     ... % TODO
 \end{defi}
 
-\begin{defi}{Glatte Kurve}
+\begin{defi}[Glatte Kurve]
     in F ist eine Immersion
     $\gamma:\RR\supset I\to F$ 
     mit $\gamma'(t) \neq 0 \forall t$ (also nicht stehen bleiben).
@@ -52,7 +52,7 @@
     $\gamma(t) = r(u(t), v(t)) \subset F$
 \end{bem}
 
-\begin{defi}{Erste Fundamentalform}
+\begin{defi}[Erste Fundamentalform]
     $\gamma:[a,b] \to F$ glatte Kurve bzgl $r$. 
 
     $\ell(\gamma) = \int_a^b |\gamma'(t)|dt = 
@@ -74,7 +74,7 @@
     Also $E>0, G>0, EG-F^2>0$!
 \end{bem}
 
-\begin{bem}{Änderung der Parametrisierung}
+\begin{bem}[Änderung der Parametrisierung]
     $\begin{psmallmatrix}
         E' & F' \\ F' & G' \\
     \end{psmallmatrix} = 
@@ -91,17 +91,17 @@
     \end{psmallmatrix}$
 \end{bem}
 
-\begin{bem}{Flächeninhalt eines Gebiets}
+\begin{bem}[Flächeninhalt eines Gebiets]
     $A(V):=\int_V|r_u\times r_v|dudv = \int_V\sqrt{EG-F^2}dudv$
 \end{bem}
 
-\begin{defi}{kurven-isometrisch}
+\begin{defi}[kurven-isometrisch]
     Zwei Flächen heißen kurven-isometrisch, falls es einen Diffeomorphismus gibt,
     der Kurven auf Kurven gleicher Länge abbildet: 
     $\ell(\gamma)=\ell(f\circ \gamma) \forall \gamma:[0,1]\to F$
 \end{defi}
 
-\begin{defi}{lokale Kurvenisometrie}
+\begin{defi}[lokale Kurvenisometrie]
     $f:F\to F'$, falls $\exists$ offene Teilmenge $V\subset F$, sodass
     $f|_V:V\to f(V)$ eine Isometrie ist.
 \end{defi}
@@ -115,7 +115,7 @@
     Kegel und Ebene sind lokal isometrisch.
 \end{bsp}
 
-\begin{defi}{Zweite Fundamentalform}
+\begin{defi}[Zweite Fundamentalform]
     $II:=-(r_u \cdot n_u \cdot du^2 + (r_u \cdot n_v + r_v \cdot n_u)dudv + r_v \cdot n_v \cdot dv^2)$
         $=\frac{1}{2}\frac{\partial}{\partial t}|_{t=0}I(t)$
         $=Ldu^2+2Mdudv+Ndv^2$
@@ -133,7 +133,7 @@
     Verschwindet die zweite Fundamentalform, so ist die Fläche ein Teil der Ebene.
 \end{satz}
 
-\begin{defi}{Gauß-Krümmung}
+\begin{defi}[Gauß-Krümmung]
     ist die Funktion $K:=\frac{LN-M^2}{EG-F^2}=\frac{\det II}{\det I}$
 \end{defi}
 
@@ -144,20 +144,20 @@
     \end{itemize}
 \end{bsp}
 
-\begin{satz}{Theorema Egregium}
+\begin{satz}[Theorema Egregium]
     $\det II$ ist durch $I$ und ihre Ableitungen vollständig bestimmt.
 \end{satz}
 
-\begin{defi}{Geodätische Krümmung}
+\begin{defi}[Geodätische Krümmung]
     $\kappa_g := t'\cdot n\times t$ mit $t:=\frac{\partial \gamma}{\partial s}$
     von einer parametrisierten Kurve $\gamma$
 \end{defi}
 
-\begin{defi}{Einfach geschlossene Kurve}
+\begin{defi}[Einfach geschlossene Kurve]
     ist eine glatte Kurve, deren Bild zu $S^1$ homöomorph ist.
 \end{defi}
 
-\begin{satz}{Gauß-Bonnet I}
+\begin{satz}[Gauß-Bonnet I]
     $\int_\gamma \kappa_g ds = 2\pi - \int_R KdA$,
     $\gamma$ umschließt $R$.
 \end{satz}
@@ -170,7 +170,7 @@
     Ebene: $\kappa_g=0,K=0 \Rightarrow \alpha + \beta + \gamma = \pi$
 \end{bsp}
 
-\begin{satz}{Gauß-Bonnet II}
+\begin{satz}[Gauß-Bonnet II]
     $F$ glatte, geschlossene, orientierte Fläche, so gilt
     $\int_F KdA = 2\pi \cdot \chi(F)$
 \end{satz}
